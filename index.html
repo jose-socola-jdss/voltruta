@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoltRuta | Carga Inteligente de Vehículos Eléctricos</title>
+  <meta name="description" content="Encuentra estaciones de carga ultrarrápida y planifica tus rutas con optimización inteligente por inteligencia artificial.">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader"><div class="preloader-spinner"></div></div>
+
+
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">VOLTRUTA</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="servicios.html">Estaciones</a></li>
+        <li><a href="contacto.html">Acceso</a></li>
+        <li><a href="contacto.html" class="nav-cta">Descargar App</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Menú">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <h1>La ruta eléctrica inteligente</h1>
+      <p>Rediseñamos la movilidad urbana. Carga tu vehículo eléctrico en minutos y optimiza tus consumos con algoritmos predictivos.</p>
+      <button class="btn-neon" onclick="window.location.href='servicios.html'">Explorar Estaciones</button>
+      
+
+      <!-- EV Charging Stops Estimator Widget -->
+      <div class="ev-stops-estimator" style="background:var(--cards); border:2px solid rgba(0, 245, 255, 0.15); border-radius:var(--radius); padding:2rem; max-width:550px; margin:3rem auto; text-align:center; font-family:var(--font-body); box-shadow:var(--glow);">
+        <h3 style="font-family:var(--font-display); color:var(--primary); font-size:1.2rem; margin-bottom:1rem; text-shadow:var(--glow);">Estimar Paradas de Carga</h3>
+        <div style="display:flex; gap:1rem; margin-bottom:1.5rem; flex-wrap:wrap; justify-content:center;">
+          <div>
+            <label style="display:block; font-size:0.85rem; margin-bottom:0.25rem; color:#A0A0BA;">Distancia del Viaje (km)</label>
+            <input type="number" id="trip-dist" value="450" style="background:#020205; border:1px solid rgba(184, 0, 255, 0.3); border-radius:6px; padding:0.5rem; color:#fff; width:120px; text-align:center;">
+          </div>
+          <div>
+            <label style="display:block; font-size:0.85rem; margin-bottom:0.25rem; color:#A0A0BA;">Autonomía del Auto (km)</label>
+            <input type="number" id="car-range" value="300" style="background:#020205; border:1px solid rgba(184, 0, 255, 0.3); border-radius:6px; padding:0.5rem; color:#fff; width:120px; text-align:center;">
+          </div>
+        </div>
+        <div style="background:#0B0B14; border-radius:8px; padding:1rem; border:1px solid rgba(0, 245, 255, 0.1);">
+          <span style="font-weight:700; color:var(--primary); font-size:1.2rem;" id="stops-result">Necesitará: 2 paradas de carga</span>
+        </div>
+      </div>
+      <!-- Phone Mockup -->
+      <div class="app-mockup-wrap">
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <div class="phone-header"></div>
+            <div class="phone-map-view">
+              <div class="phone-route-line"></div>
+            </div>
+            <div style="height: 35px; background: rgba(184, 0, 255, 0.15); border-radius: 8px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features Block -->
+  <section class="reveal-item section">
+    <div class="container">
+      <h2 class="section-title">Tecnología de Punta</h2>
+      <div class="neon-pricing-grid">
+        <div class="neon-card">
+          <h3>Carga Ultrarrápida</h3>
+          <p class="neon-price">350 kW</p>
+          <p>Equipos de última generación capaces de cargar el 80% de tu batería en solo 15 minutos.</p>
+        </div>
+        <div class="neon-card active">
+          <h3>IA Predicción</h3>
+          <p class="neon-price">99%</p>
+          <p>Planificación de rutas calculando desniveles, clima y ocupación de cargadores en tiempo real.</p>
+        </div>
+        <div class="neon-card">
+          <h3>Red Nacional</h3>
+          <p class="neon-price">500+</p>
+          <p>Estaciones estratégicamente distribuidas en todas las principales autopistas del país.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Station status checker -->
+  <section class="reveal-item section" style="background: rgba(0,0,0,0.2);">
+    <div class="container">
+      <h2 class="section-title">Estaciones Destacadas</h2>
+      <div class="station-list">
+        <div class="station-item">
+          <div>
+            <h3>Cargador Autopista Norte — Km 45</h3>
+            <p>4 Conectores CCS Combo 2 libres</p>
+          </div>
+          <span class="station-status">ACTIVO</span>
+        </div>
+        <div class="station-item">
+          <div>
+            <h3>Estación Central Centro Comercial</h3>
+            <p>6 Conectores tipo 2 libres</p>
+          </div>
+          <span class="station-status">ACTIVO</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <h3>VOLTRUTA</h3>
+        <p>Soluciones Inteligentes de Energía Eléctrica</p>
+      </div>
+      <div class="footer-dev">
+        <span>Desarrollado por</span>
+        <a href="../index.html" class="footer-logo-link" aria-label="Ir a Blyp">
+          <img src="../blyp_logotipo.svg" alt="Blyp Logo" class="footer-logo">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
